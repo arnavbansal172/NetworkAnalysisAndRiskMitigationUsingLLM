@@ -83,3 +83,5 @@ generation_config.json
 *.asv
 *.log
 .localized
+
+check_env.py

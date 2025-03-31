@@ -10,7 +10,7 @@ accelerate #For efficient model loading/training
 peft
 trl
 bitsandbytes
-# Packet Processing
+# Packet Processingpip
 scapy
 
 # CLI Framework
@@ -23,3 +23,8 @@ python-json-logger # For structured logging (good practice)
 pypcap # For live capture (platform dependent installation)
 dpkt # Alternative packet parsing library
 requests
+
+#install within different venv llama3b_finetune_env
+#pip install tiktoken
+#pip install protobuf
+#pip install blobfile
