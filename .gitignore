@@ -1,0 +1,85 @@
+# Virtual Environment
+myven/
+*.venv/
+llama3b_finetune_venv/
+venv/
+
+# Python Bytecode and Cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build artifacts
+build/
+dist/
+sdist/
+*.egg-info/
+wheels/
+*.whl
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE / editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.project
+*.workspace
+*.settings
+*.metadata
+
+# Secrets / Environment variables
+*.env.*
+.env
+
+# Test / coverage artifacts
+htmlcov/
+.coverage
+*.cover
+.pytest_cache/
+
+# Large data files (consider Git LFS if needed for examples)
+data/database/*
+data/pcap/*
+data/finetuning_data/*
+# Uncomment the lines below if you want to track the directory structure but not the contents
+# !data/database/.gitkeep
+# !data/pcap/.gitkeep
+# !data/finetuning_data/.gitkeep
+
+# Logs
+logs/
+
+# LLM Models (should not be tracked)
+models/
+*.bin
+*.safetensors
+
+# Fine-tuning specific additions
+mistral-finetuned/
+mistral-finetuned-final/
+open_llama_3b_v2-finetuned/
+output/
+results/
+checkpoint-*/
+runs/
+lightning_logs/
+wandb/
+tmp_train_data/
+tmp_eval_data/
+training_args.bin
+generation_config.json
+
+# Other
+*.pth
+
+# Temporary files (general)
+*.tmp
+*.bak
+*.asv
+*.log
+.localized

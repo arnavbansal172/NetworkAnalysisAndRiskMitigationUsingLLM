@@ -1,0 +1,25 @@
+# Core LLM and ML Libraries
+transformers
+torch
+torchvision 
+torchaudio
+#for nvidia GPU support, uncomment the following line and install the appropriate version for your CUDA toolkit
+#torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+datasets
+accelerate #For efficient model loading/training
+peft
+trl
+bitsandbytes
+# Packet Processing
+scapy
+
+# CLI Framework
+click
+
+# Utilities
+python-dotenv # For managing environment variables (like API keys or model paths)
+python-json-logger # For structured logging (good practice)
+
+pypcap # For live capture (platform dependent installation)
+dpkt # Alternative packet parsing library
+requests
