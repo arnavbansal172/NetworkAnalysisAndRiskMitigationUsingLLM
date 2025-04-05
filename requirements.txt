@@ -28,3 +28,21 @@ requests
 #pip install tiktoken
 #pip install protobuf
 #pip install blobfile
+
+python-magic #(optional, for file type detection)
+
+PyPDF2 #or pymupdf (for PDFs)
+
+python-docx #(for DOCX)
+
+beautifulsoup4 #& requests (for HTML scraping)
+
+PyYAML #(for YAML)
+
+#json (built-in)
+
+#scapy (for PCAP reading/processing)
+
+pandas #(for intermediate data handling)
+
+tqdm 

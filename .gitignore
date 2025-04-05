@@ -85,3 +85,176 @@ generation_config.json
 .localized
 
 check_env.py
+
+# ==================================================================
+# Python Virtual Environments
+# ==================================================================
+myven/
+*.venv/
+llama3b_finetune_venv/
+venv/
+.python-version # pyenv version file
+
+# ==================================================================
+# Python Bytecode, Cache, and Eggs
+# ==================================================================
+__pycache__/
+*.py[cod] # Covers .pyc, .pyo, .pyd
+*.egg-info/
+*.egg
+
+# ==================================================================
+# Distribution / Build Artifacts
+# ==================================================================
+build/
+dist/
+sdist/
+wheels/
+*.whl
+*.manifest
+*.spec
+
+# ==================================================================
+# OS-specific & Temporary Files
+# ==================================================================
+# macOS
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+# Windows
+Thumbs.db
+# Linux
+*~
+# General Temp
+*.tmp
+*.bak
+*.bak[0-9]
+*.swo # Vim swap files
+*.swp # Vim swap files
+*.tmp.*
+*.log # General log files, might be too broad if some logs ARE needed
+
+# ==================================================================
+# IDE / Editor Configurations
+# ==================================================================
+.idea/         # IntelliJ / PyCharm
+.vscode/       # Visual Studio Code
+*.sublime-*    # Sublime Text
+nbproject/     # NetBeans
+*.project      # Eclipse / Other
+*.workspace    # Eclipse / Other
+*.settings     # Various
+*.metadata     # Eclipse / Other
+.c9/           # Cloud9
+
+# ==================================================================
+# Secrets & Sensitive Configuration
+# (Ensure these are NEVER committed)
+# ==================================================================
+*.env*         # Matches .env, .env.local, .env.development etc.
+.env           # Explicitly ignore .env
+secrets.yaml
+secrets.json
+*.credential*
+*.pem
+*.key
+
+# ==================================================================
+# Test, Coverage & Profiling Artifacts
+# ==================================================================
+htmlcov/       # Coverage HTML reports
+.coverage*     # Coverage data files
+*.cover
+nosetests.xml
+coverage.xml
+*.prof         # Profiling output
+*.lprof
+.pytest_cache/
+pytestdebug.log
+
+# ==================================================================
+# Datasets & Large Files (Crucial for ML/Data Science)
+# ==================================================================
+# --- Raw Input Data (Often large, not version controlled) ---
+raw_data/
+
+# --- Intermediate Processing Data ---
+staging/
+
+# --- Processed/Training Data (Often large, specific formats) ---
+data/database/*
+data/pcap/*         # Raw PCAPs should definitely be ignored
+data/finetuning_data/* # Processed fine-tuning data (e.g., the JSONL)
+# Use .gitkeep if you want to track the EMPTY directory structure:
+# Create an empty file named ".gitkeep" inside these directories
+# and uncomment the lines below.
+# !data/database/.gitkeep
+# !data/pcap/.gitkeep
+# !data/finetuning_data/.gitkeep
+
+# --- Specific Data Tool Caches (if stored locally) ---
+nltk_data/
+
+# ==================================================================
+# LLM Models & Adapters (VERY Large - DO NOT TRACK)
+# ==================================================================
+models/            # Catch-all for models directory
+models/base/       # Specifically ignore base models if structured this way
+*.bin              # Common PyTorch model format
+*.safetensors      # Newer, safer format
+*.pt               # PyTorch state dicts / checkpoints
+*.pth              # Older PyTorch model format
+*.onnx             # ONNX format
+
+# ==================================================================
+# Fine-tuning & Experiment Artifacts
+# ==================================================================
+# --- Common Output Dirs ---
+mistral-finetuned/
+mistral-finetuned-final/
+open_llama_3b_v2-finetuned/
+# Add your specific TinyLlama adapter output dir name pattern if consistent:
+tinyllama_*/
+output/
+outputs/
+results/
+
+# --- Checkpoints ---
+checkpoint-*/       # Common pattern for Hugging Face Trainer checkpoints
+*.ckpt             # PyTorch Lightning checkpoints
+
+# --- Logs & Trackers ---
+logs/              # General logs directory (duplicates *.log but good practice)
+runs/              # TensorBoard runs directory (HF Trainer default)
+lightning_logs/    # PyTorch Lightning logs
+wandb/             # Weights & Biases logs/artifacts (if used)
+mlruns/            # MLflow runs (if used)
+tensorboard/       # Another common name for TensorBoard logs
+data_processing.log # Specific pipeline log file
+
+# --- Temporary Data during Training ---
+tmp_train_data/
+tmp_eval_data/
+
+# --- Saved Configs from Training ---
+training_args.bin
+generation_config.json
+trainer_state.json
+
+# ==================================================================
+# Notebook Specific
+# ==================================================================
+.ipynb_checkpoints/
+*.ipynb             # Optional: Ignore notebooks themselves if they contain sensitive output/data
+
+# ==================================================================
+# Documentation Builds
+# ==================================================================
+docs/_build/       # Sphinx build output (if using Sphinx)
+site/              # MkDocs build output (if using MkDocs)
+
+# ==================================================================
+# Specific Files from User List (if they shouldn't be tracked)
+# ==================================================================
+check_env.py       # User-added script
